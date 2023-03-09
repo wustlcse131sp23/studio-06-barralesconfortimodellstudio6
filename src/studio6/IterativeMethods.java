@@ -26,12 +26,24 @@ public class IterativeMethods {
 	 * @return greatest common divisor of p and q
 	 */
 	public static int gcd(int p, int q) {
-		while (q != 0) {
+		/*	while (q != 0) {
 			int temp = q;
 			q = p % q;
 			p = temp;
 		}
 		return p;
+		 */	 
+
+
+		if (p%q == 0) {
+			return q; 
+
+		} else {
+			return gcd(q, p%q);
+		}
+
+		return p;
+
 	}
 
 	/**
